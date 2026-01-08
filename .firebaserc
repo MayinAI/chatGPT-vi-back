@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "mayin-d52c6"
+  },
+  "targets": {
+    "mayin-d52c6": {
+      "hosting": {
+        "mayin-app": [
+          "mayin-app"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

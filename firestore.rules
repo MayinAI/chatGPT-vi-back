@@ -1,0 +1,155 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow users to read and write their own user document
+    // Also allow creation of new user documents for authenticated users
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Allow brands to read and write their own brand document
+    match /brands/{brandId} {
+      allow read, write: if request.auth != null && request.auth.uid == brandId;
+      allow create: if request.auth != null && request.auth.uid == brandId;
+    }
+    
+    // Allow creators to read and write their own creator document
+    // Support both UUID-based and phone number-based access
+    match /creators/{creatorId} {
+      allow read, write: if request.auth != null && 
+        (request.auth.uid == resource.data.userId || 
+         request.auth.uid == resource.data.contactPhone);
+      allow create: if request.auth != null;
+    }
+    
+    // Allow Instagram verification data access
+    match /instagramVerifications/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Allow creator campaigns access
+    match /creatorCampaigns/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Allow completed campaigns access
+    match /completedCampaigns/{campaignId} {
+      allow read, write: if request.auth != null;
+      allow create: if request.auth != null;
+    }
+    
+    // Allow coupon rewards access
+    match /coupon_rewards/{rewardId} {
+      allow read, write: if request.auth != null;
+      allow create: if request.auth != null;
+    }
+    
+    // Allow campaigns to be read by the brand that created them
+    match /campaigns/{campaignId} {
+      allow read, write: if request.auth != null && 
+        (request.auth.uid == resource.data.brandId || 
+         request.auth.uid == resource.data.createdBy);
+      allow create: if request.auth != null;
+    }
+    
+    // Allow creators to read campaigns for application
+    match /campaigns/{campaignId} {
+      allow read: if request.auth != null;
+    }
+    
+    // Allow brand campaigns access
+    match /brandCampaigns/{campaignId} {
+      allow read, write: if request.auth != null;
+      allow create: if request.auth != null;
+    }
+    
+    // Allow campaign applications - creators can only access their own
+    // Support both UUID-based and phone number-based access
+    match /campaignApplications/{applicationId} {
+      allow read, write: if request.auth != null && 
+        (request.auth.uid == resource.data.userId || 
+         request.auth.uid == resource.data.contactPhone);
+      allow create: if request.auth != null;
+    }
+    
+    // Allow campaign submissions - creators can only access their own
+    // Support both UUID-based and phone number-based access
+    match /campaignSubmissions/{submissionId} {
+      allow read, write: if request.auth != null && 
+        (request.auth.uid == resource.data.userId || 
+         request.auth.uid == resource.data.contactPhone);
+      allow create: if request.auth != null;
+    }
+    
+    // Allow video submissions - creators can only access their own
+    // Support both UUID-based and phone number-based access
+    match /videoSubmissions/{submissionId} {
+      allow read, write: if request.auth != null && 
+        (request.auth.uid == resource.data.userId || 
+         request.auth.uid == resource.data.contactPhone);
+      allow create: if request.auth != null;
+    }
+    
+    // Allow payments access
+    match /payments/{paymentId} {
+      allow read, write: if request.auth != null;
+      allow create: if request.auth != null;
+    }
+    
+    // Allow escrow access
+    match /escrow/{escrowId} {
+      allow read, write: if request.auth != null;
+      allow create: if request.auth != null;
+    }
+    
+    // Allow insurance access
+    match /insurance/{insuranceId} {
+      allow read, write: if request.auth != null;
+      allow create: if request.auth != null;
+    }
+    
+    // Allow notifications access
+    match /notifications/{notificationId} {
+      allow read, write: if request.auth != null;
+      allow create: if request.auth != null;
+    }
+    
+    // Allow legal actions access
+    match /legalActions/{actionId} {
+      allow read, write: if request.auth != null;
+      allow create: if request.auth != null;
+    }
+    
+    // Allow debt collection access
+    match /debtCollection/{debtId} {
+      allow read, write: if request.auth != null;
+      allow create: if request.auth != null;
+    }
+    
+    // Allow killer plans access - users can only access their own killer plans
+    match /killerPlans/{planId} {
+      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+    }
+
+    // ChatGPT Visibility scans: users can only access their own scans
+    match /users/{userId}/scans/{scanId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Nested prompts/results under scans
+    match /users/{userId}/scans/{scanId}/prompts/{promptId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Default deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+} 

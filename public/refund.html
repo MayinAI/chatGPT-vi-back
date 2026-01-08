@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy - Mayin</title>
+    <meta name="description" content="Mayin's Refund Policy explains when and how refunds are processed for our influencer marketing platform.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .refund-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .refund-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .refund-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .refund-content {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .refund-section {
+            margin-bottom: 3rem;
+        }
+        
+        .refund-section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+        }
+        
+        .refund-section h3 {
+            color: #333;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.5rem;
+        }
+        
+        .refund-section h4 {
+            color: #444;
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.2rem;
+        }
+        
+        .refund-section p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .refund-section ul {
+            color: #666;
+            line-height: 1.8;
+            margin: 1rem 0 1rem 2rem;
+        }
+        
+        .refund-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .refund-section ol {
+            color: #666;
+            line-height: 1.8;
+            margin: 1rem 0 1rem 2rem;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-box h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+        
+        .warning-box p {
+            color: #856404;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        
+        .success-box h4 {
+            color: #155724;
+            margin-bottom: 1rem;
+        }
+        
+        .success-box p {
+            color: #155724;
+        }
+        
+        .last-updated {
+            background: #e8f4fd;
+            border: 1px solid #b3d9ff;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .last-updated strong {
+            color: #0066cc;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        
+        .refund-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .refund-table th {
+            background: #667eea;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .refund-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .refund-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .refund-process {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        
+        .refund-process h3 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .process-step h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .process-step p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .refund-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .refund-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .refund-table {
+                font-size: 0.9rem;
+            }
+            
+            .refund-table th,
+            .refund-table td {
+                padding: 0.8rem 0.5rem;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bullseye"></i>
+                <span>Mayin</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#download" class="nav-link">Download</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Refund Hero -->
+    <section class="refund-hero">
+        <div class="container">
+            <h1>Refund Policy</h1>
+            <p>Understanding our refund policies and processes for the Mayin platform.</p>
+        </div>
+    </section>
+
+    <!-- Refund Content -->
+    <section class="refund-content">
+        <div class="container">
+            <div class="last-updated">
+                <strong>Last Updated:</strong> January 15, 2024
+            </div>
+
+            <div class="refund-section">
+                <h2>1. Overview</h2>
+                <p>At Mayin, we strive to provide exceptional service and ensure customer satisfaction. This Refund Policy outlines the circumstances under which refunds may be issued and the process for requesting them.</p>
+                
+                <div class="highlight-box">
+                    <h4>Our Commitment</h4>
+                    <p>We believe in fair and transparent refund policies. If you're not satisfied with our service or if we fail to deliver as promised, we'll work with you to resolve the issue and, where appropriate, provide a refund.</p>
+                </div>
+            </div>
+
+            <div class="refund-section">
+                <h2>2. Refund Eligibility</h2>
+                
+                <h3>2.1 When Refunds Are Available</h3>
+                <p>Refunds may be issued in the following circumstances:</p>
+                
+                <div class="table-container">
+                    <table class="refund-table">
+                        <thead>
+                            <tr>
+                                <th>Scenario</th>
+                                <th>Refund Eligibility</th>
+                                <th>Conditions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Service Not Delivered</strong></td>
+                                <td>Full Refund</td>
+                                <td>If Mayin fails to provide the core service</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Technical Issues</strong></td>
+                                <td>Partial/Full Refund</td>
+                                <td>Extended platform downtime or critical bugs</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Campaign Cancellation</strong></td>
+                                <td>Pro-rated Refund</td>
+                                <td>Before campaign execution begins</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Creator Non-Performance</strong></td>
+                                <td>Partial Refund</td>
+                                <td>If creator fails to deliver as agreed</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Billing Errors</strong></td>
+                                <td>Full Refund</td>
+                                <td>Duplicate charges or incorrect amounts</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>2.2 When Refunds Are Not Available</h3>
+                <p>Refunds will not be issued in the following cases:</p>
+                <ul>
+                    <li>Platform fees for completed campaigns</li>
+                    <li>Service charges for account maintenance</li>
+                    <li>Campaigns that have been fully executed</li>
+                    <li>Violations of our Terms of Service</li>
+                    <li>Fraudulent or abusive behavior</li>
+                    <li>Third-party payment processor fees</li>
+                </ul>
+            </div>
+
+            <div class="refund-section">
+                <h2>3. Refund Process</h2>
+                
+                <div class="refund-process">
+                    <h3>How to Request a Refund</h3>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h4>Contact Support</h4>
+                            <p>Reach out to our support team through the app or email</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h4>Provide Details</h4>
+                            <p>Explain the issue and provide relevant documentation</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h4>Review Process</h4>
+                            <p>Our team will investigate and assess your request</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h4>Resolution</h4>
+                            <p>We'll communicate our decision and process the refund if approved</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>3.1 Required Information</h3>
+                <p>To process your refund request, please provide:</p>
+                <ul>
+                    <li>Your account information and contact details</li>
+                    <li>Transaction ID or payment reference</li>
+                    <li>Detailed description of the issue</li>
+                    <li>Any relevant screenshots or documentation</li>
+                    <li>Preferred refund method</li>
+                </ul>
+
+                <h3>3.2 Response Time</h3>
+                <p>We aim to respond to all refund requests within:</p>
+                <ul>
+                    <li><strong>Initial Response:</strong> 24-48 hours</li>
+                    <li><strong>Investigation Period:</strong> 3-5 business days</li>
+                    <li><strong>Refund Processing:</strong> 5-10 business days</li>
+                </ul>
+            </div>
+
+            <div class="refund-section">
+                <h2>4. Campaign-Specific Refunds</h2>
+                
+                <h3>4.1 Brand Campaign Refunds</h3>
+                <p>For brand campaigns, refunds are processed based on campaign status:</p>
+                
+                <div class="table-container">
+                    <table class="refund-table">
+                        <thead>
+                            <tr>
+                                <th>Campaign Stage</th>
+                                <th>Refund Amount</th>
+                                <th>Processing Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Planning Phase</td>
+                                <td>100% of campaign budget</td>
+                                <td>3-5 business days</td>
+                            </tr>
+                            <tr>
+                                <td>Creator Selection</td>
+                                <td>90% of campaign budget</td>
+                                <td>5-7 business days</td>
+                            </tr>
+                            <tr>
+                                <td>Content Creation</td>
+                                <td>50% of campaign budget</td>
+                                <td>7-10 business days</td>
+                            </tr>
+                            <tr>
+                                <td>Published Content</td>
+                                <td>No refund available</td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>4.2 Creator Payment Refunds</h3>
+                <p>If a creator fails to deliver as agreed:</p>
+                <ul>
+                    <li>Brand receives a partial refund based on work completed</li>
+                    <li>Creator may receive partial payment for work delivered</li>
+                    <li>Platform fees are non-refundable</li>
+                    <li>Dispute resolution may be required</li>
+                </ul>
+            </div>
+
+            <div class="refund-section">
+                <h2>5. Refund Methods</h2>
+                
+                <h3>5.1 Available Refund Methods</h3>
+                <p>Refunds are processed using the original payment method:</p>
+                <ul>
+                    <li><strong>Credit/Debit Cards:</strong> Refunded to the original card</li>
+                    <li><strong>Bank Transfers:</strong> Refunded to the originating account</li>
+                    <li><strong>Digital Wallets:</strong> Refunded to the wallet account</li>
+                    <li><strong>Platform Credits:</strong> Added back to your Mayin account</li>
+                </ul>
+
+                <h3>5.2 Processing Times by Method</h3>
+                <ul>
+                    <li><strong>Credit/Debit Cards:</strong> 5-10 business days</li>
+                    <li><strong>Bank Transfers:</strong> 7-14 business days</li>
+                    <li><strong>Digital Wallets:</strong> 1-3 business days</li>
+                    <li><strong>Platform Credits:</strong> Immediate</li>
+                </ul>
+
+                <div class="warning-box">
+                    <h4>Important Note</h4>
+                    <p>Processing times may vary depending on your bank or payment provider. International refunds may take longer due to currency conversion and banking procedures.</p>
+                </div>
+            </div>
+
+            <div class="refund-section">
+                <h2>6. Dispute Resolution</h2>
+                
+                <h3>6.1 When Disputes Arise</h3>
+                <p>If there's a disagreement about refund eligibility or amounts:</p>
+                <ol>
+                    <li>Both parties submit their perspective and evidence</li>
+                    <li>Mayin's dispute resolution team reviews the case</li>
+                    <li>Additional information may be requested</li>
+                    <li>A fair resolution is determined</li>
+                    <li>Both parties are notified of the decision</li>
+                </ol>
+
+                <h3>6.2 Escalation Process</h3>
+                <p>If you're not satisfied with our resolution:</p>
+                <ul>
+                    <li>Request a review by senior management</li>
+                    <li>Provide additional evidence or documentation</li>
+                    <li>Consider mediation services (for high-value disputes)</li>
+                    <li>Legal action as a last resort</li>
+                </ul>
+            </div>
+
+            <div class="refund-section">
+                <h2>7. Special Circumstances</h2>
+                
+                <h3>7.1 Force Majeure Events</h3>
+                <p>In cases of extraordinary circumstances (natural disasters, government actions, etc.):</p>
+                <ul>
+                    <li>Refund policies may be adjusted</li>
+                    <li>Alternative solutions will be offered</li>
+                    <li>Communication will be provided promptly</li>
+                    <li>Fair compensation will be considered</li>
+                </ul>
+
+                <h3>7.2 Technical Failures</h3>
+                <p>For platform-wide technical issues:</p>
+                <ul>
+                    <li>Service credits may be offered</li>
+                    <li>Extended access periods provided</li>
+                    <li>Pro-rated refunds for affected services</li>
+                    <li>Compensation for demonstrable losses</li>
+                </ul>
+            </div>
+
+            <div class="refund-section">
+                <h2>8. Preventing Refund Issues</h2>
+                
+                <div class="success-box">
+                    <h4>Best Practices</h4>
+                    <p>To minimize the need for refunds, we recommend:</p>
+                </div>
+                
+                <h3>8.1 For Brands</h3>
+                <ul>
+                    <li>Clearly define campaign requirements and expectations</li>
+                    <li>Review creator profiles and past work thoroughly</li>
+                    <li>Communicate promptly with creators</li>
+                    <li>Provide clear feedback and guidelines</li>
+                    <li>Set realistic timelines and budgets</li>
+                </ul>
+
+                <h3>8.2 For Creators</h3>
+                <ul>
+                    <li>Understand campaign requirements before accepting</li>
+                    <li>Communicate any challenges or delays early</li>
+                    <li>Deliver content according to agreed specifications</li>
+                    <li>Maintain professional communication</li>
+                    <li>Meet deadlines and quality standards</li>
+                </ul>
+            </div>
+
+            <div class="refund-section">
+                <h2>9. Contact Information</h2>
+                <p>For refund requests or questions about this policy:</p>
+                
+                <div class="highlight-box">
+                    <h4>Mayin Support Team</h4>
+                    <p><strong>Email:</strong> hello@mayin.app</p>
+                    <p><strong>In-App Support:</strong> Available 24/7 through the mobile app</p>
+                    <p><strong>Phone:</strong> +91 7306091003 (Mon-Fri: 9AM-6PM IST)</p>
+                    <p><strong>Response Time:</strong> We aim to respond within 24 hours</p>
+                </div>
+            </div>
+
+            <div class="refund-section">
+                <h2>10. Policy Updates</h2>
+                <p>This Refund Policy may be updated periodically to reflect changes in our services or legal requirements. We will notify users of significant changes through:</p>
+                <ul>
+                    <li>Email notifications</li>
+                    <li>In-app announcements</li>
+                    <li>Updates to this page</li>
+                    <li>Social media announcements</li>
+                </ul>
+                
+                <p>Your continued use of the Mayin platform after policy updates constitutes acceptance of the modified terms.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Mayin</span>
+                    </div>
+                    <p>Connecting brands with authentic creators for impactful influencer marketing campaigns.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Help Center</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                        <li><a href="contact.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <p><strong>Wepani Agri Tech Pvt Ltd</strong></p>
+                    <p>Kalleril Ho, Kochi - 683562</p>
+                    <p>Phone: +91 7306091003</p>
+                    <p>Email: hello@mayin.app</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mayin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

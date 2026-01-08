@@ -1,0 +1,84 @@
+🚀 OneGoal1Crore Daily Health Check - Sun May 25 16:59:44 IST 2025
+============================================
+[2025-05-25 16:59:44] 📡 Testing Production Endpoints...
+🚀 OneGoal1Crore Production Endpoint Testing
+==================================================
+
+🔍 Testing Endpoint Availability...
+✅ callAIChat: Available (Status: 405)
+✅ checkSubscriptionStatus: Available (Status: 405)
+✅ cancelSubscription: Available (Status: 405)
+✅ razorpayWebhook: Available (Status: 405)
+
+🌐 Testing CORS Configuration...
+⚠️  CORS headers not found in OPTIONS response
+
+💳 Testing Subscription Status Endpoint...
+✅ Subscription Status endpoint is working
+   Response: {
+  "isSubscribed": false,
+  "subscriptionExpiry": null,
+  "subscriptionStatus": "not_found"
+}
+
+🤖 Testing AI Chat Endpoint...
+✅ AI Chat endpoint is working
+   Response length: 2085 characters
+   Sample response: "Hello! It's great that you're taking the initiative to build wealth. The first step is to lay a soli..."
+
+🚦 Testing Rate Limiting...
+⚠️  Rate limiting may not be working as expected
+   All requests went through (this might be normal for low traffic)
+
+✨ Testing Complete!
+
+📊 Next Steps:
+1. Update your Flutter app with the production URLs
+2. Test with real user authentication
+3. Monitor logs in Firebase Console
+4. Set up monitoring alerts
+[2025-05-25 17:00:01] ✅ Endpoint tests completed successfully
+[2025-05-25 17:00:01] 🔍 Checking Function Health...
+[2025-05-25 17:00:01] Checking function: callAIChat
+./scripts/daily-health-check.sh: line 37: gcloud: command not found
+[2025-05-25 17:00:01] ❌ callAIChat status check failed
+[2025-05-25 17:00:01] Checking function: checkSubscriptionStatus
+./scripts/daily-health-check.sh: line 37: gcloud: command not found
+[2025-05-25 17:00:01] ❌ checkSubscriptionStatus status check failed
+[2025-05-25 17:00:01] Checking function: getRazorpayConfig
+./scripts/daily-health-check.sh: line 37: gcloud: command not found
+[2025-05-25 17:00:02] ❌ getRazorpayConfig status check failed
+[2025-05-25 17:00:02] Checking function: createRazorpaySubscription
+./scripts/daily-health-check.sh: line 37: gcloud: command not found
+[2025-05-25 17:00:02] ❌ createRazorpaySubscription status check failed
+[2025-05-25 17:00:02] Checking function: cancelSubscription
+./scripts/daily-health-check.sh: line 37: gcloud: command not found
+[2025-05-25 17:00:02] ❌ cancelSubscription status check failed
+[2025-05-25 17:00:02] Checking function: razorpayWebhook
+./scripts/daily-health-check.sh: line 37: gcloud: command not found
+[2025-05-25 17:00:02] ❌ razorpayWebhook status check failed
+[2025-05-25 17:00:02] Checking function: processExpiredSubscriptions
+./scripts/daily-health-check.sh: line 37: gcloud: command not found
+[2025-05-25 17:00:02] ❌ processExpiredSubscriptions status check failed
+[2025-05-25 17:00:02] 🚨 Checking Recent Errors...
+[2025-05-25 17:00:02] ✅ No errors in the last 24 hours
+[2025-05-25 17:00:02] 📊 Checking Function Usage...
+[2025-05-25 17:00:02] 📈 Total function invocations in last 24 hours:        0
+[2025-05-25 17:00:02] 🚦 Checking Rate Limiting...
+[2025-05-25 17:00:02] ✅ No rate limiting events in the last 24 hours
+[2025-05-25 17:00:02] 🤖 Checking AI Chat Performance...
+[2025-05-25 17:00:02] 📈 AI Chat successful responses:        0
+[2025-05-25 17:00:02] ❌ AI Chat errors:        0
+[2025-05-25 17:00:02] 💳 Checking Subscription Activity...
+[2025-05-25 17:00:02] 📈 Subscription-related events:        0
+[2025-05-25 17:00:02] ⚡ Checking Performance Metrics...
+[2025-05-25 17:00:02] 💡 Performance metrics available in Cloud Console
+[2025-05-25 17:00:02] 📋 Health Check Summary:
+[2025-05-25 17:00:02] ========================
+[2025-05-25 17:00:02] ✅ Functions Status: All active
+[2025-05-25 17:00:02] 📊 24h Invocations:        0
+[2025-05-25 17:00:02] 🚨 24h Errors:        0
+[2025-05-25 17:00:02] 🚦 Rate Limits:        0
+[2025-05-25 17:00:02] 🤖 AI Success Rate: N/A%
+[2025-05-25 17:00:02] 💳 Subscription Events:        0
+[2025-05-25 17:00:02] 🎉 Overall System Health: GOOD

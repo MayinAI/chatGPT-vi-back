@@ -1,0 +1,22 @@
+displayName: "OneGoal1Crore - Slow Response Time Alert"
+documentation:
+  content: "Alert when Cloud Functions response time exceeds 30 seconds"
+  mimeType: "text/markdown"
+conditions:
+  - displayName: "Cloud Function Response Time > 30s"
+    conditionThreshold:
+      filter: 'resource.type="cloud_function" AND metric.type="cloudfunctions.googleapis.com/function/execution_time"'
+      comparison: COMPARISON_GREATER_THAN
+      thresholdValue: 30000
+      duration: "300s"
+      aggregations:
+        - alignmentPeriod: "60s"
+          perSeriesAligner: ALIGN_MEAN
+          crossSeriesReducer: REDUCE_MEAN
+          groupByFields:
+            - "resource.label.function_name"
+combiner: OR
+enabled: true
+notificationChannels: []
+alertStrategy:
+  autoClose: "1800s" 
