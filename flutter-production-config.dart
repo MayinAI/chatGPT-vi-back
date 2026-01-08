@@ -3,7 +3,7 @@
 
 class ProductionConfig {
   // Firebase Project Configuration
-  static const String firebaseProjectId = 'one-goal1-crore-kc9xh8';
+  static const String firebaseProjectId = 'YOUR_PROJECT_ID';
   
   // Production Environment
   static const bool isProduction = true;
@@ -11,7 +11,7 @@ class ProductionConfig {
   static const String appVersion = '1.0.1'; // Updated version for closed testing
   
   // Cloud Functions URLs (HTTP Endpoints)
-  static const String baseUrl = 'https://us-central1-one-goal1-crore-kc9xh8.cloudfunctions.net';
+  static const String baseUrl = 'https://us-central1-YOUR_PROJECT_ID.cloudfunctions.net';
   
   // HTTP Endpoints
   static const String aiChatUrl = 'https://callaichat-xamfzjydta-uc.a.run.app';

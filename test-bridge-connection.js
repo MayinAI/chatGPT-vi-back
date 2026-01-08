@@ -6,9 +6,9 @@ const { getFirestore, collection, getDocs } = require('firebase/firestore');
 // Firebase config
 const firebaseConfig = {
   apiKey: "YOUR_API_KEY",
-  authDomain: "one-goal1-crore-kc9xh8.firebaseapp.com",
-  projectId: "one-goal1-crore-kc9xh8",
-  storageBucket: "one-goal1-crore-kc9xh8.firebasestorage.app",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
   messagingSenderId: "107845768028",
   appId: "1:107845768028:web:663cc06a01bb422583a799"
 };

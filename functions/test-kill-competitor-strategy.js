@@ -5,7 +5,7 @@ const { getFunctions, httpsCallable } = require('firebase/functions');
 // Firebase configuration (replace with your actual config)
 const firebaseConfig = {
   apiKey: "YOUR_API_KEY",
-  authDomain: "mayin-d52c6.firebaseapp.com",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
   projectId: "mayin-d52c6",
   storageBucket: "mayin-d52c6.appspot.com",
   messagingSenderId: "123456789",

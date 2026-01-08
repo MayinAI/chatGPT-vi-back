@@ -4,11 +4,11 @@ const { getFunctions, httpsCallable } = require('firebase/functions');
 // Firebase configuration
 const firebaseConfig = {
   apiKey: "YOUR_API_KEY",
-  authDomain: "mayin-d52c6.firebaseapp.com",
-  projectId: "mayin-d52c6",
-  storageBucket: "mayin-d52c6.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef123456"
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
 };
 
 // Initialize Firebase

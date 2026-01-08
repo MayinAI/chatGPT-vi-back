@@ -5,12 +5,11 @@
 // // You will need to download your own service account key from the Firebase console
 // // and place it in the same directory as this script.
 // // For more information, see: https://firebase.google.com/docs/admin/setup
-// const serviceAccount = require('./serviceAccountKey.json');
-
+// const serviceAccount = require('YOUR_SERVICE_ACCOUNT_KEY_PATH');
+//
 // admin.initializeApp({
 //   credential: admin.credential.cert(serviceAccount),
-//   projectId: 'onegoal1crore-ai',
-//   databaseURL: 'https://onegoal1crore-ai.firebaseio.com'
+//   databaseURL: 'https://YOUR_DATABASE_URL.firebaseio.com'
 // });
 
 const db = admin.firestore();
