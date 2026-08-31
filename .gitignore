@@ -1,1 +1,10 @@
 firebase-debug.log
+*.log
+.DS_Store
+.firebase/
+node_modules/
+.env
+.env.*
+!.env.example
+*_backup.json
+*_backup.txt
